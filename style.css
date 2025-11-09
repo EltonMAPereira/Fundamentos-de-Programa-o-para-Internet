@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 450px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #2b7cff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #195dd1;
+}
+
+.btn-adicionar {
+    background-color: #5cb85c;
+    font-size: 14px;
+    padding: 5px;
+    width: auto;
+    align-self: flex-start;
+}
+
+.btn-adicionar:hover {
+    background-color: #449d44;
+}
+
+.bloco {
+    margin-top: 15px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.campo-grupo textarea {
+    width: 96%;
+    resize: vertical;
+}
+
+.btn-remover {
+    background-color: #d9534f;
+    color: white;
+    padding: 5px;
+    width: 50px;
+    font-size: 14px;
+    align-self: flex-end;
+}
+
+.btn-remover:hover {
+    background-color: #b52b27;
+}

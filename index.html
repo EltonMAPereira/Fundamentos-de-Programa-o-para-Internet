@@ -1,40 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
-    <script type="text/javascript">
-        var x = 0;
-        console.log(typeof(x))
-        console.log(x)
-        x = "texto";
-        console.log(typeof(x))
-        console.log(x)
-        var texto = "texto 2";
-        console.log(typeof(texto));
-        console.log(texto);
-        var t;
-        console.log(typeof(t))
-        console.log(t)
-    </script>
-    <style>
-        body {
-            background-color: lightblue;
-        }
-        h1 {
-            font-style: italic;
-        }
-        h2{
-            font-size: 38px;
-            color: blueviolet;
-            font-style: bold;
-            font-style: italic;
-        }
-    </style>
+    <title>Cadastro de Currículo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Live Server Rodando</h1>
-    <h2>Quem leu é Gay, Você é muito linda!</h2>
-</body>
+    <body>
+    <div class="container">
+        <h1>Cadastro de Currículo</h1>
+
+        <form action="processamento.php" method="post" id="form-curriculo">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required>
+
+        <!-- EXPERIÊNCIAS -->
+        <div class="bloco">
+            <label>Experiência profissional:</label>
+            <div id="experiencias">
+            <div class="campo-grupo">
+                <textarea name="experiencia[]" rows="3" required></textarea>
+                <button type="button" class="btn-remover" onclick="removerCampo(this)">X</button>
+            </div>
+            </div>
+            <button type="button" class="btn-adicionar" onclick="adicionarCampo('experiencias','experiencia[]')">
+            + Adicionar experiência
+            </button>
+        </div>
+
+        <!-- FORMAÇÕES -->
+        <div class="bloco">
+            <label>Formação acadêmica:</label>
+            <div id="formacoes">
+            <div class="campo-grupo">
+                <textarea name="formacao[]" rows="3" required></textarea>
+                <button type="button" class="btn-remover" onclick="removerCampo(this)">X</button>
+            </div>
+            </div>
+            <button type="button" class="btn-adicionar" onclick="adicionarCampo('formacoes','formacao[]')">
+            + Adicionar formação
+            </button>
+        </div>
+
+        <button type="submit">Gerar Currículo</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
 </html>
